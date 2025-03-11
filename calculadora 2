@@ -1,0 +1,34 @@
+import os
+
+# Limpar tela
+os.system("cls")
+
+print("Calculadora")
+print("===========")
+
+numero01 = float(input("Digite o primeiro número: "))
+numero02 = float(input("Digite o segundo número: "))
+operacao = input("Digite a operação que deseja (+, -, *, /): ")
+
+# Verificar a operação e realizar o cálculo
+if operacao == "+":
+    resultado = numero01 + numero02
+elif operacao == "-":
+    resultado = numero01 - numero02
+elif operacao == "*":
+    resultado = numero01 * numero02
+elif operacao == "/":
+    if numero02 != 0:
+        resultado = numero01 / numero02  
+else:
+    resultado = "Operação inválida."
+
+# Limpar a tela novamente
+os.system("cls")
+
+# Exibir os resultados
+print("Cálculo")
+print("=======")
+print("Números escolhidos:", numero01, numero02)
+print("Operação escolhida:", operacao)
+print("Resultado:", resultado)
